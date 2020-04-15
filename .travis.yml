@@ -9,7 +9,7 @@ script:
    - cd jpf-core
    - ./gradlew buildjars
    - cd ../jpf-symbc
-   - ls
+   - ant build
    
    
 addons:
