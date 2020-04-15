@@ -4,7 +4,8 @@ jdk:
    - oraclejdk8
 script:
    - cd /..
-   - git clone https://github.com/javapathfinder/jpf-core.git wikumC/jpf-core
+   -ls -a
+   - git clone https://github.com/javapathfinder/jpf-core.git
    - ./gradlew buildjars
    - cd ../jpf-symbc
    - ant build
