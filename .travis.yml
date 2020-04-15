@@ -5,7 +5,6 @@ jdk:
 script:
    -cd /..
    -git clone --depth=50 --branch=develop https://github.com/javapathfinder/jpf-core.git wikumC/jpf-core
-   -./gradlew assemble
    -./gradlew buildjars
    -cd ../jpf-symbc
    -ant build
