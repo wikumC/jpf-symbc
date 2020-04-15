@@ -2,12 +2,10 @@ dist: trusty
 language: java
 jdk:
    - oraclejdk8
-
-
-
-script: 
+script:
    -cd /..
    -git clone --depth=50 --branch=develop https://github.com/javapathfinder/jpf-core.git wikumC/jpf-core
+   -./gradlew assemble
    -./gradlew buildjars
    -cd ../jpf-symbc
    -ant build
@@ -16,3 +14,11 @@ addons:
   apt:
     packages:
       - oracle-java8-installer
+      
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
