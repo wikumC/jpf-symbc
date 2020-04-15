@@ -6,9 +6,6 @@ script:
    - git clone https://github.com/javapathfinder/jpf-core.git wikumC/jpf-core
    - cd wikumC/jpf-core
    - ./gradlew buildjars
-   - cd /wikumC
-   -ls
-   - ant build
    
 addons:
   apt:
