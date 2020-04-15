@@ -1,8 +1,10 @@
 dist: trusty
 language: java
-
-install: ant
-
+install: ant dep
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
 jdk:
   - oraclejdk8
 script:
