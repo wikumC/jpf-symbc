@@ -5,6 +5,7 @@ jdk:
 script:
    - ls
    - cd /..
+   - ls
    - ls -la
    - git clone https://github.com/javapathfinder/jpf-core.git
    - ./gradlew buildjars
