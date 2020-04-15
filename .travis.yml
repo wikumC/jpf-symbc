@@ -3,11 +3,11 @@ language: java
 jdk:
    - oraclejdk8
 script:
-   -cd /..
-   -git clone https://github.com/javapathfinder/jpf-core.git
-   -./gradlew buildjars
-   -cd ../jpf-symbc
-   -ant build
+   - cd /..
+   - git clone https://github.com/javapathfinder/jpf-core.git
+   - ./gradlew buildjars
+   - cd ../jpf-symbc
+   - ant build
    
 addons:
   apt:
