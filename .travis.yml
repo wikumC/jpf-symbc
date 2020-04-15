@@ -2,9 +2,17 @@ dist: trusty
 language: java
 jdk:
    - oraclejdk8
+
+
+
+script: 
+   -cd /..
+   -git clone --depth=50 --branch=develop https://github.com/javapathfinder/jpf-core.git wikumC/jpf-core
+   -./gradlew buildjars
+   -cd ../jpf-symbc
+   -ant build
+   
 addons:
   apt:
     packages:
       - oracle-java8-installer
-
-script: ant build
