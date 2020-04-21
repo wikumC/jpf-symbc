@@ -3,10 +3,6 @@ language: java
 jdk:
    - oraclejdk8
 script:
-   - mkdir ~/junit
-   - ln -s /usr/share/java/junit4.jar ~/junit
-   - ln -s /usr/share/java/hamcrest-core.jar ~/junit
-   - export JUNIT_HOME=~/junit
    - pwd
    - cd ..
    - git clone https://github.com/javapathfinder/jpf-core.git
