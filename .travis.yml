@@ -2,7 +2,13 @@ dist: trusty
 language: java
 jdk:
    - oraclejdk8
-script:
+before_install:
+  - mkdir ~/junit
+  - ln -s /usr/share/java/junit4.jar ~/junit
+  - ln -s /usr/share/java/hamcrest-core.jar ~/junit
+  - export JUNIT_HOME=~/junit
+
+install:
    - pwd
    - cd ..
    - git clone https://github.com/javapathfinder/jpf-core.git
@@ -16,6 +22,7 @@ addons:
   apt:
     packages:
       - oracle-java8-installer
+      - junit4
       
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
